@@ -1,0 +1,27 @@
+{
+  "name": "@oscar-rg/axiosify",
+  "version": "0.0.1",
+  "description": "A versatile tool for effortlessly converting curl commands into Axios requests.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "private": false,
+  "scripts": {
+    "dev": "vitest",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "lint": "tsc ",
+    "test": "vitest run",
+    "ci": "pnpm run lint && pnpm run test && pnpm run build",
+    "release": "pnpm run lint && pnpm run test && pnpm run build && changeset publish"
+  },
+  "keywords": [],
+  "author": "Oscar Rivas Gonzalez",
+  "license": "MIT",
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "@types/node": "^20.11.16",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.2"
+  }
+}
